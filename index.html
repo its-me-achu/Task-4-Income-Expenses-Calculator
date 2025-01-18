@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income & Expense Claculator</title>
+    <link rel="stylesheet" href="/output.css">
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th,td{
+            border:  1px solid gray;
+            padding: 5px;
+        }
+        .delete-btn{
+            background-color: brown;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div  class="grid" id="container">
+        <!--Header Section-->
+        <section class="mt-5" 
+        id="header-section">
+            <h1 class="font-bold text-red-400 text-center justify-between items-center">Income & Expense Claculator</h1>
+        </section>
+
+        <!--Input Section-->
+        <section class="mt-5 text-center  justify-between items-center" id="input-section">
+            <div class="flex row-auto justify-between items-center p-10" id="input-div">
+                <!--Expense Category Input Label-->
+               <label class="font-bold mr-10 text-green-600" for="category-select">Category:</label> 
+               <!--Categories for Expense-->
+               <select name="" id="category-select">
+                <option value="House Rent">House Rent</option>
+                <option value="EB Bill">EB Bill</option>
+                <option value="Grocery Items">Grocery Items</option>
+                <option value="Gas">Gas</option>
+                <option value="Petrol">Petrol</option>
+                <option value="Scool (or) College Feess">Scool (or) College Feess</option>
+                <option value="Weekly-Outing">Weekly-Outing</option>
+                <option value="Festival-Dress">Festival-Dress</option>
+                <option value="Others">Others</option>
+               </select>
+               <!--Amout Input Label-->
+               <label class="font-bold mr-10  text-green-600" for="amount-input">Amount:</label>
+               <input class="p-5 mr-10" type="number" id="amount-input">
+               <!--Date Input-->
+               <label class="font-bold mr-10  text-green-600" for="date-input">Date:</label>
+               <input class="p-5 mr-10" type="date" id="date-input">
+               <!--Button For Add-->
+               <button class="bg-red-400 rounded  px-7 py-1 font-bold mr-10  text-green-600" id="add-btn">Add</button>
+            </div>
+        </section>
+<!--Expense List Section-->
+        <section class="mt-2 m-5" id="expenses-list">
+            <h2 class="mt-2 font-semibold text-center justify-between items-center text-red-600">Expenses List</h2>
+            
+            <!--Table-->
+            <table class="">
+                <!--Tablw Head-->
+                <thead class="border border-black bg-blue-300">
+                        <tr class="border border-black">
+                            <th class="border border-black">Category</th>
+                            <th class="border border-black" >Amount</th>
+                            <th class="border border-black">Date</th>
+                            <th class="border border-black">Delete</th>
+                        </tr>
+                </thead>
+                <!--Table Body-->
+                <tbody  class="border border-black" id="expense-table-body">
+
+                </tbody>
+                <!--Table Foot-->
+                <tfoot class="border border-black font-bold">
+                    <td class="border border-black">Total:</td>
+                    <td  class="border border-black"id="total-amount"></td>
+                    <td class="border border-black"></td>
+                    <td class="border border-black"></td>
+                </tfoot>
+            </table>
+        </section>
+    </div>
+    <!--Add JS File-->
+    <Script src="/app.js"></Script>
+</body>
+</html>
